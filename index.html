@@ -8,21 +8,21 @@
 
 
 <div>
-  <h2>Cell Properties</h2>
+  <h2>Researchers Input</h2>
 </div>
 
 <form>
   <p>
+    <label>article_ID</label>
+    <input type="text" id="mName"></p>
+  <p>
+
   <label>metaboliteName</label>
   <input type="text" id="mName"></p>
   
   <p>
   <label>colloquialName</label>
   <input type="text" id="cName"></p>
-
-  <p>
-  <label>scientificName</label>
-  <input type="text" id="sName"></p>
   
   <p>
   <label>sourceOrDestinationName</label>
@@ -47,11 +47,16 @@
 
 <button type="button" onclick="getInputValue();">Submit</button>
 
+<button type="Switch Between Pages" onclick="getInputValue();">Switch Between Pages</button>
+
+<A HREF="website2.html">Switch To User View</A>
+  
+</html>
 
 <script>
   function getInputValue(){
       // Selecting the input element and get its value 
-      var inputVal1 = document.getElementById("mName").value;
+      var article_ID = document.getElementById("mName").value;
       var inputVal2 = document.getElementById("cName").value;
       var inputVal3 = document.getElementById("sName").value;
       var inputVal4 = document.getElementById("sRName").value;
@@ -60,7 +65,7 @@
       var inputVal7 = document.getElementById("sOR").value;
       
       // Displaying the value
-      alert("Data Updated:   \n"+inputVal1+"\n"+inputVal2+"\n"+inputVal3+"\n"+inputVal4+"\n"+inputVal5+"\n"+inputVal6+"\n"+inputVal7);
+      alert("Data Updated:   \n"+article_ID+"\n"+inputVal2+"\n"+inputVal3+"\n"+inputVal4+"\n"+inputVal5+"\n"+inputVal6+"\n"+inputVal7);
   }
 </script>
 
