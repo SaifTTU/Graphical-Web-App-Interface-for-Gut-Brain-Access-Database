@@ -1,0 +1,87 @@
+
+
+<!DOCTYPE html>
+<html>
+<title>GBA</title>
+<body>
+
+
+
+<div>
+  <h2>General Users</h2>
+</div>
+
+  
+
+<p>Which of the following tables do you wish to see?</p>
+  <input id="User" name="user" value="Saif">
+  <label for="User">User</label><br>
+  <input id="Password" name="user" value="Chowdhury">
+  <label for="Password">Password</label><br>
+
+<select name="tables" id="tables">
+    <option value="edges calculations">Metabolite</option>
+    <option value="load measured">Load Measurement</option>
+    <option value="articles study details">Article Details</option>
+    <option value="articles">Article</option>
+</select>
+
+<div id="displaytable" class="placeholder">
+    <table id="displaytable2" width="100%" cellpadding="1" cellspacing="0" border="3">
+      <tr align="center">
+        <td class="lbl">column1</td>
+        <td class="lbl">column2</td>
+        <td class="lbl">column3</td>
+      </tr>
+      <tr>
+        <td align="center">1</td>
+        <td align="center">2</td>
+        <td align="center">33</td>
+      </tr>
+      <tr>
+        <td align="center">4</td>
+        <td align="center">5</td>
+        <td align="center">6</td>
+      </tr>
+    </table>
+  </div>
+  <div>
+    <input type="button" id="clickme" value="Show/Hide" />
+  </div>
+  <script>
+      var click = document.getElementById('clickme');
+click.addEventListener('click', myfunction);
+
+function myfunction() {
+  var tablewrap = document.getElementById('displaytable');
+  tablewrap.classList.toggle('hidden')
+};
+  </script>
+  
+
+  
+  
+</form>
+
+<button type="button" onclick="getInputValue();">Submit</button>
+
+<A HREF="index.html">Switch To Researcher View</A>
+
+<script>
+  function getInputValue(){
+      // Selecting the input element and get its value 
+      var article_ID = document.getElementById("mName").value;
+      var inputVal2 = document.getElementById("cName").value;
+      var inputVal3 = document.getElementById("sName").value;
+      var inputVal4 = document.getElementById("sRName").value;
+      var inputVal5 = document.getElementById("sRID").value;
+      var inputVal6 = document.getElementById("sRID").value;
+      var inputVal7 = document.getElementById("sOR").value;
+      
+      // Displaying the value
+      alert("Data Updated:   \n"+article_ID+"\n"+inputVal2+"\n"+inputVal3+"\n"+inputVal4+"\n"+inputVal5+"\n"+inputVal6+"\n"+inputVal7);
+  }
+</script>
+
+</body>
+</html> 
