@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <title>GBA</title>
@@ -8,38 +6,133 @@
 
 
 <div>
-  <h2>Researchers Input</h2>
+  <h2>General Users</h2>
 </div>
 
-<form>
-  <p>
-    <label>article_ID</label>
-    <input type="text" id="mName"></p>
-  <p>
-
-  <label>metaboliteName</label>
-  <input type="text" id="mName"></p>
-  
-  <p>
-  <label>colloquialName</label>
-  <input type="text" id="cName"></p>
-  
-  <p>
-  <label>sourceOrDestinationName</label>
-  <input type="text" id="sRName"></p>
-  
-  <p>
-  <label>sourceOrDestinationID</label>
-  <input type="text" id="sRID"></p>
-
-  <p>
-    <label>boolSentRecieved</label>
-    <input type="text" id="sOR"></p>
   
 
-  <p>
-  <label>unitsSentOrRecieved</label>
-  <input type="text"></p>
+<p>Which of the following tables do you wish to see?</p>
+  <input id="User" name="user" value="Saif">
+  <label for="User">User</label><br>
+  <input id="Password" name="user" value="Chowdhury">
+  <label for="Password">Password</label><br>
+
+<select id="list">
+    <option value="none" selected disabled hidden>Select a Table</option>
+    <option id="sp1" value="1">edges calculations</option>
+    <option id="sp2" value="2">load measured</option>
+    <option id="sp3" value="3">articles</option>
+    <option id="sp4" value="4">articles study details</option>
+</select>
+
+<div id="displaytable" class="placeholder">
+    <table id="displaytable2" width="100%" cellpadding="1" cellspacing="0" border="3">
+      <tr align="center">
+        <td class="lbl">column1</td>
+        <td class="lbl">column2</td>
+        <td class="lbl">column3</td>
+      </tr>
+      <tr>
+        <td align="center">1</td>
+        <td align="center">2</td>
+        <td align="center">33</td>
+      </tr>
+      <tr>
+        <td align="center">4</td>
+        <td align="center">5</td>
+        <td align="center">6</td>
+      </tr>
+    </table>
+  </div>
+  <div>
+    <input type="button" id="clickme" value="Show/Hide" />
+  </div>
+  
+
+
+<table border="1" id="t1">
+    <tr align="center">
+        <td class="lbl">column1</td>
+        <td class="lbl">column2</td>
+        <td class="lbl">column3</td>
+      </tr>
+      <tr>
+        <td align="center">1</td>
+        <td align="center">2</td>
+        <td align="center">33</td>
+      </tr>
+      <tr>
+        <td align="center">4</td>
+        <td align="center">5</td>
+        <td align="center">6</td>
+      </tr>
+</table>
+<table border="1" id="t2">
+    <tr align="center">
+        <td class="lbl">column1</td>
+        <td class="lbl">column2</td>
+        <td class="lbl">column3</td>
+        <td class="lbl">column4</td>
+        <td class="lbl">column5</td>
+      </tr>
+      <tr>
+        <td align="center">1</td>
+        <td align="center">2</td>
+        <td align="center">3</td>
+        <td align="center">4</td>
+        <td align="center">5</td>
+      </tr>
+      <tr>
+        <td align="center">6</td>
+        <td align="center">7</td>
+        <td align="center">8</td>
+        <td align="center">9</td>
+        <td align="center">10</td>
+    </tr>
+</table>
+<table border="1" id="t3">
+    <tr align="center">
+        <td class="lbl">column1</td>
+        <td class="lbl">column2</td>
+        <td class="lbl">column3</td>
+        <td class="lbl">column4</td>
+        <td class="lbl">column5</td>
+      </tr>
+      <tr>
+        <td align="center">1</td>
+        <td align="center">2</td>
+        <td align="center">3</td>
+        <td align="center">4</td>
+        <td align="center">TRUE</td>
+      </tr>
+      <tr>
+        <td align="center">6</td>
+        <td align="center">7</td>
+        <td align="center">8</td>
+        <td align="center">9</td>
+        <td align="center">FALSE</td>
+    </tr>
+</table>
+<table border="1" id="t4">
+    <tr align="center">
+        <td class="lbl">column1</td>
+        <td class="lbl">column2</td>
+        <td class="lbl">column3</td>
+        <td class="lbl">column4</td>
+      </tr>
+      <tr>
+        <td align="center">1</td>
+        <td align="center">2</td>
+        <td align="center">3</td>
+        <td align="center">4</td>
+      </tr>
+      <tr>
+        <td align="center">5</td>
+        <td align="center">6</td>
+        <td align="center">7</td>
+        <td align="center">8</td>
+</table>
+
 
   
   
@@ -47,11 +140,7 @@
 
 <button type="button" onclick="getInputValue();">Submit</button>
 
-<button type="Switch Between Pages" onclick="getInputValue();">Switch Between Pages</button>
-
-<A HREF="website2.html">Switch To User View</A>
-  
-</html>
+<A HREF="website.html">Switch To Researcher View</A>
 
 <script>
   function getInputValue(){
@@ -66,8 +155,57 @@
       
       // Displaying the value
       alert("Data Updated:   \n"+article_ID+"\n"+inputVal2+"\n"+inputVal3+"\n"+inputVal4+"\n"+inputVal5+"\n"+inputVal6+"\n"+inputVal7);
-  }
+    }
+
+        var click = document.getElementById('clickme');
+        click.addEventListener('click', myfunction);
+
+    function myfunction() {
+        var tablewrap = document.getElementById('displaytable');
+        tablewrap.classList.toggle('hidden')
+    };
+
+    
+
+    function showTable(table){
+        var tables =['t1','t2','t3','t4'];    
+        for(var i=0;i<4;i++){
+            document.getElementById(tables[i]).style.display = "none";    
+        }
+        document.getElementById(table).style.display = "block";
+        
+    }
+
+    var changedText = document.getElementById('changed');
+    function listQ(){
+        if(this.value==1){
+            showTable('t1');
+        }
+        if(this.value==2){
+            showTable('t2');
+        }
+        if(this.value==3){
+            showTable('t3');
+        }
+        if(this.value==4){
+            showTable('t4');
+        }
+
+        changedText.textContent = this.value;
+    }
+    document.getElementById("list").onchange = listQ;
+
 </script>
 
 </body>
 </html> 
+
+<style>
+    table {
+        display : none;
+    }
+    span {
+        border :  1px solid black;
+        padding : 5px;
+    }
+</style>
