@@ -25,31 +25,11 @@
     <option id="sp4" value="4">articles study details</option>
 </select>
 
-<div id="displaytable" class="placeholder">
-    <table id="displaytable2" width="100%" cellpadding="1" cellspacing="0" border="3">
-      <tr align="center">
-        <td class="lbl">column1</td>
-        <td class="lbl">column2</td>
-        <td class="lbl">column3</td>
-      </tr>
-      <tr>
-        <td align="center">1</td>
-        <td align="center">2</td>
-        <td align="center">33</td>
-      </tr>
-      <tr>
-        <td align="center">4</td>
-        <td align="center">5</td>
-        <td align="center">6</td>
-      </tr>
-    </table>
-  </div>
-  <div>
-    <input type="button" id="clickme" value="Show/Hide" />
-  </div>
+
+  
   
 
-
+<div id="dropdown" class="placeholder">
 <table border="1" id="t1">
     <tr align="center">
         <td class="lbl">column1</td>
@@ -132,6 +112,7 @@
         <td align="center">7</td>
         <td align="center">8</td>
 </table>
+</div>
 
 
   
@@ -157,7 +138,7 @@
       alert("Data Updated:   \n"+article_ID+"\n"+inputVal2+"\n"+inputVal3+"\n"+inputVal4+"\n"+inputVal5+"\n"+inputVal6+"\n"+inputVal7);
     }
 
-        var click = document.getElementById('clickme');
+        var click = document.getElementById('dropdown');
         click.addEventListener('click', myfunction);
 
     function myfunction() {
