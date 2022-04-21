@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <title>GBA</title>
@@ -23,6 +25,7 @@
     <option id="sp2" value="2">load measured</option>
     <option id="sp3" value="3">articles</option>
     <option id="sp4" value="4">articles study details</option>
+    <option id="sp5" value="5">edges reference</option>
 </select>
 
 
@@ -32,35 +35,58 @@
 <div id="dropdown" class="placeholder">
 <table border="1" id="t1">
     <tr align="center">
-        <td class="lbl">column1</td>
-        <td class="lbl">column2</td>
-        <td class="lbl">column3</td>
+        <td class="lbl">Edge_Number_ID</td>
+        <td class="lbl">Edge_Character_ID</td>
+        <td class="lbl">Source_Abbreviation</td>
+        <td class="lbl">Sink_Abbreviation</td>
+        <td class="lbl">Load_Abbreviation</td>
+        <td class="lbl">Amount</td>
+        <td class="lbl">Units</td>
+        <td class="lbl">Valid_Load</td>
       </tr>
       <tr>
         <td align="center">1</td>
-        <td align="center">2</td>
-        <td align="center">33</td>
+        <td align="center">c_s_l</td>
+        <td align="center">hype</td>
+        <td align="center">pit</td>
+        <td align="center">crf</td>
+        <td align="center">20,0000</td>
+        <td align="center">KILOGRAMS</td>
+        <td align="center">TRUE</td>
       </tr>
       <tr>
         <td align="center">4</td>
         <td align="center">5</td>
         <td align="center">6</td>
+        <td align="center">33</td>
+        <td align="center">33</td>
+        <td align="center">859,246</td>
+        <td align="center">GRAMS</td>
+        <td align="center">TRUE</td>
       </tr>
 </table>
 <table border="1" id="t2">
     <tr align="center">
-        <td class="lbl">column1</td>
-        <td class="lbl">column2</td>
-        <td class="lbl">column3</td>
-        <td class="lbl">column4</td>
-        <td class="lbl">column5</td>
+        <td class="lbl">Load_ID</td>
+        <td class="lbl">Type_Of_Load</td>
+        <td class="lbl">Name_Of_Load</td>
+        <td class="lbl">Location</td>
+        <td class="lbl">Ammount</td>
+        <td class="lbl">Units</td>
+        <td class="lbl">How_Measured</td>
+        <td class="lbl">Article_ID</td>
+        <td class="lbl">Article_Sub_ID</td>
       </tr>
       <tr>
-        <td align="center">1</td>
-        <td align="center">2</td>
-        <td align="center">3</td>
-        <td align="center">4</td>
-        <td align="center">5</td>
+        <td align="center">0</td>
+        <td align="center">metabolite</td>
+        <td align="center">tnf alpha</td>
+        <td align="center">Spleen</td>
+        <td align="center">625</td>
+        <td class="lbl">pG/mL</td>
+        <td class="lbl">Retrieved</td>
+        <td class="lbl">1</td>
+        <td class="lbl">2</td>
       </tr>
       <tr>
         <td align="center">6</td>
@@ -68,15 +94,18 @@
         <td align="center">8</td>
         <td align="center">9</td>
         <td align="center">10</td>
+        <td align="center">11</td>
+        <td align="center">12</td>
     </tr>
 </table>
 <table border="1" id="t3">
     <tr align="center">
-        <td class="lbl">column1</td>
-        <td class="lbl">column2</td>
-        <td class="lbl">column3</td>
-        <td class="lbl">column4</td>
-        <td class="lbl">column5</td>
+        <td class="lbl">Article_ID</td>
+        <td class="lbl">Year_Published</td>
+        <td class="lbl">LastName_FirstAuthor</td>
+        <td class="lbl">Animal_Model</td>
+        <td class="lbl">DOI_Link</td>
+        <td class="lbl">Link_Verified</td>
       </tr>
       <tr>
         <td align="center">1</td>
@@ -84,33 +113,63 @@
         <td align="center">3</td>
         <td align="center">4</td>
         <td align="center">TRUE</td>
+        <td align="center">TRUE</td>
       </tr>
       <tr>
         <td align="center">6</td>
         <td align="center">7</td>
         <td align="center">8</td>
         <td align="center">9</td>
-        <td align="center">FALSE</td>
+        <td align="center">TRUE</td>
+        <td align="center">TRUE</td>
     </tr>
 </table>
 <table border="1" id="t4">
     <tr align="center">
-        <td class="lbl">column1</td>
-        <td class="lbl">column2</td>
-        <td class="lbl">column3</td>
-        <td class="lbl">column4</td>
+        <td class="lbl">Article_ID</td>
+        <td class="lbl">Article_Sub_ID</td>
+        <td class="lbl">Animal_Distinction</td>
+        <td class="lbl">Animal_Sex</td>
+        <td class="lbl">Animal_State</td>
+        <td class="lbl">Experiment_Conditions</td>
       </tr>
       <tr>
         <td align="center">1</td>
         <td align="center">2</td>
         <td align="center">3</td>
-        <td align="center">4</td>
+        <td align="center">male</td>
+        <td align="center">no stress</td>
+        <td align="center">in vivo</td>
       </tr>
       <tr>
         <td align="center">5</td>
         <td align="center">6</td>
         <td align="center">7</td>
-        <td align="center">8</td>
+        <td align="center">female</td>
+        <td align="center">stress</td>
+        <td align="center">ex vivo</td>
+</table>
+<table border="1" id="t5">
+  <tr align="center">
+      <td class="lbl">Edge_Number_ID</td>
+      <td class="lbl">Source_Full_Name</td>
+      <td class="lbl">Sink_Full_Name</td>
+      <td class="lbl">Load_Full_Name</td>
+      <td class="lbl">Article_ID</td>
+    </tr>
+    <tr>
+      <td align="center">1</td>
+      <td align="center">2</td>
+      <td align="center">3</td>
+      <td align="center">4</td>
+      <td align="center">5</td>
+    </tr>
+    <tr>
+      <td align="center">6</td>
+      <td align="center">7</td>
+      <td align="center">8</td>
+      <td align="center">9</td>
+      <td align="center">10</td>
 </table>
 </div>
 
@@ -170,6 +229,9 @@
         }
         if(this.value==4){
             showTable('t4');
+        }
+        if(this.value==5){
+            showTable('t5');
         }
 
         changedText.textContent = this.value;
