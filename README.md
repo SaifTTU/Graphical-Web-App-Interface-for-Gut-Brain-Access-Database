@@ -12,7 +12,7 @@ We were able to create queries that can be transfered into html files, using nod
 
 You're gonna need to follow allong this tutorial in order to npm install the remaining files get it to be working correctlys https://www.youtube.com/watch?v=344Zv2m9TYI
 
-Also the main file you should be looking into editing from now one will be in: config/db.js (located here:)
+Also the main file you should be looking into editing from now one will be in: config/db.js (located here: )
 
 https://github.com/SaifTTU/Graphical-Web-App-Interface-for-Gut-Brain-Access-Database/blob/main/config/db.js
 
