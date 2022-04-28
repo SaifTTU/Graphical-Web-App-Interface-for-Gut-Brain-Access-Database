@@ -14,6 +14,8 @@ You're gonna need to follow allong this tutorial in order to npm install the rem
 
 Also the main file you should be looking into editing from now one will be in: config/db.js
 
+(located here: https://github.com/SaifTTU/Graphical-Web-App-Interface-for-Gut-Brain-Access-Database/blob/main/config/db.js ) 
+
 The rest is just helper functions, but they need to be edited in order to fit your specificiations
 
 like for env, make sure the password is yours (oh, no)
