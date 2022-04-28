@@ -1,0 +1,60 @@
+<table>
+    <tr>
+      <th>Name</th>
+      <th>Subject</th>
+      <th>Marks</th>
+    </tr>
+    <tr>
+      <td rowspan = "2">Hillary</td>
+      <td>Advanced Web</td>
+      <td>75</td>
+    </tr>
+    <tr>
+      <td>Operating Syatem</td>
+      <td>60</td>
+    </tr>
+        <tr>
+      <td rowspan = "2">Lary</td>
+      <td>Advanced Web</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <td>Operating Syatem</td>
+      <td>75</td>
+    </tr>
+    <tr>
+       <td></td>
+      <td colspan="3">Total Average: 72.5</td>
+    </tr>
+  </table>
+
+  
+  <form id="myForm" method="post">
+    Number 1:
+    <input type="number" id="numa" name="numa" step="any"/><br>
+    Number 2:
+    <input type="number" id="numb" name="numb" step="any"/><br>
+    <input type="number" id="answer" name="answer" readonly/>
+    <input type="submit" value="Submit"/>
+  </form>
+  <div id="result"></div>
+  <script>
+      $(document).ready(function(){
+          $("#myForm").submit(function(event){
+              event.preventDefault();
+              var num1 = $('#numa').val();
+              var num2 = $('#numb').val();
+              $.ajax({
+                  method: 'post',
+                  url: '/data',
+                  data: JSON.stringify({ num1: num1, num2: num2 }),
+                  contentType: 'application/json',
+                  success: function(data) {
+                      $('#answer').val(data);
+                  }
+  
+              })
+          });
+      });
+  </script>
+  
